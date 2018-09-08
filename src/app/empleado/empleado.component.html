@@ -8,5 +8,19 @@
   <div class="list-group-item">
       <span class="badge">{{emp.cargo}}</span>Cargo
   </div>
-
+  <div class="list-group-item">
+      <span class="badge">{{emp.estado}}</span>Estado empleado
+  </div>
+  <div class="list-group-item">
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary pull-right" (click)="actualizarEstado()">
+          <span *ngIf="emp.estado == 'Activo'; else noActivo">Desactivar</span>
+          <ng-template #noActivo>
+            <span>Activar</span>
+          </ng-template>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

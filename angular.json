@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "clase4": {
+    "clase5": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/clase4",
+            "outputPath": "dist/clase5",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -50,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "clase4:build"
+            "browserTarget": "clase5:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "clase4:build:production"
+              "browserTarget": "clase5:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "clase4:build"
+            "browserTarget": "clase5:build"
           }
         },
         "test": {
@@ -95,7 +96,7 @@
         }
       }
     },
-    "clase4-e2e": {
+    "clase5-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "clase4:serve"
+            "devServerTarget": "clase5:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "clase4:serve:production"
+              "devServerTarget": "clase5:serve:production"
             }
           }
         },
@@ -123,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "clase4"
+  "defaultProject": "clase5"
 }
